@@ -1,0 +1,6 @@
+defutf8 on
+defencoding utf8
+termcapinfo xterm|xterms|xs|rxvt ti@:te@
+password WXOnYUCAX2pw6
+caption always "%{+b bk}$USER@%{wk}%H | %{yk}(load: %l)  %-21=%{wk}%D %d.%m.%Y %0c"
+hardstatus alwayslastline "%{wr}%n%f %t %{kw} | %?%-Lw%?%{wb}%n*%f %t%?(%u)%?%{kw}%?%+Lw%? %{wk}"
