@@ -22,22 +22,10 @@ endif
 
 call plug#begin(data_dir . '/plugins')
 
-" Dracula
-Plug 'dracula/vim', { 'as': 'dracula' }
-
-augroup DraculaOverrides
-    autocmd!
-    autocmd ColorScheme dracula highlight DraculaBoundary guibg=none
-    autocmd ColorScheme dracula highlight DraculaDiffDelete ctermbg=none guibg=none
-    autocmd ColorScheme dracula highlight DraculaComment cterm=italic gui=italic
-    autocmd User PlugLoaded colorscheme dracula
-augroup end
-
 " Airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-"let g:airline_theme = 'dracula'
 let g:airline_theme='base16_dracula'
 let g:airline_powerline_fonts = 1
 let g:airline_skip_empty_sections = 1
@@ -51,5 +39,3 @@ let g:airline#extensions#tabline#left_alt_sep = ' '
 
 set noshowmode
 call plug#end()
-"doautocmd User PlugLoaded
-"colorscheme dracula
