@@ -21,6 +21,8 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
 endif
 
 call plug#begin(data_dir . '/plugins')
+" Fugitive
+Plug 'tpope/vim-fugitive' | Plug 'tpope/vim-rhubarb'
 
 " Airline
 Plug 'vim-airline/vim-airline'
