@@ -19,6 +19,9 @@ if $TERM == "xterm-256color"
   set t_Co=256
 endif
 
+" Keymaps
+let mapleader = "\<space>"
+
 " Automatically install vim-plug
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
