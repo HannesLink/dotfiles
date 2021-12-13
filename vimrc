@@ -9,9 +9,15 @@ autocmd FileType python setlocal ai ts=4 sts=4 sw=4 expandtab
 scriptencoding utf-8
 set encoding=utf-8
 set number
+set relativenumber
+set title
 set cursorline
 set list listchars=tab:»\ ,trail:·
 set viminfo='100,<1000,s100,h
+
+if $TERM == "xterm-256color"
+  set t_Co=256
+endif
 
 " Automatically install vim-plug
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
@@ -21,23 +27,8 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
 endif
 
 call plug#begin(data_dir . '/plugins')
-" Fugitive
-Plug 'tpope/vim-fugitive' | Plug 'tpope/vim-rhubarb'
 
-" Airline
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+source ~/.config/vim/plugins/airline.vim
+source ~/.config/vim/plugins/fugitive.vim
 
-"let g:airline_theme='base16_dracula'
-let g:airline_powerline_fonts = 1
-let g:airline_skip_empty_sections = 1
-
-let g:airline_left_sep = ''
-let g:airline_right_sep = ''
-
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = ' '
-
-set noshowmode
 call plug#end()
