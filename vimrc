@@ -30,5 +30,6 @@ call plug#begin(data_dir . '/plugins')
 
 source ~/.config/vim/plugins/airline.vim
 source ~/.config/vim/plugins/fugitive.vim
+source ~/.config/vim/plugins/nerdtree.vim
 
 call plug#end()
