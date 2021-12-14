@@ -12,6 +12,8 @@ set number
 set relativenumber
 set title
 set cursorline
+set ignorecase
+set smartcase
 set list listchars=tab:»\ ,trail:·
 set viminfo='100,<1000,s100,h
 
@@ -21,6 +23,8 @@ endif
 
 " Keymaps
 let mapleader = "\<space>"
+" source $MYVIMRC reloads the saved $MYVIMRC
+nmap <Leader>s :source $MYVIMRC<CR>
 
 " Automatically install vim-plug
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
