@@ -16,6 +16,8 @@ set ignorecase
 set smartcase
 set list listchars=tab:»\ ,trail:·
 set viminfo='100,<1000,s100,h
+set path+=**
+set wildmenu
 
 if $TERM == "xterm-256color"
   set t_Co=256
@@ -29,6 +31,9 @@ endif
 let mapleader = "\<space>"
 " source $MYVIMRC reloads the saved $MYVIMRC
 nmap <Leader>s :source $MYVIMRC<CR>
+
+" Snippets
+nnoremap ,html :-1read $HOME/.config/vim/skeleton.html<CR>4jwf>a
 
 " Automatically install vim-plug
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
