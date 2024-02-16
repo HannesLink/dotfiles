@@ -8,6 +8,7 @@
     ~/.screenrc: screenrc
     ~/.vimrc: vimrc
     ~/.config/vim: vim
+    ~/.config/starship.toml: starship.toml
 
 - create:
     - ~/downloads
