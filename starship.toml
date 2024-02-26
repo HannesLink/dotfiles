@@ -3,8 +3,9 @@ format = """\
 [ ](bg:#7DF9AA fg:#090c0c)\
 [](fg:#7DF9AA bg:#1C3A5E)\
 $time\
-[](fg:#1C3A5E bg:#3B76F0)\
+[](fg:#1C3A5E bg:#7DF9AA)\
 $python\
+[](fg:#7DF9AA bg:#3B76F0)\
 $directory\
 [](fg:#3B76F0 bg:#FCF392)\
 $git_branch\
@@ -16,7 +17,7 @@ $character\
 
 [python]
 format = "[  $virtualenv ]($style)"
-style = "fg:#E4E4E4 bg:#3B76F0"
+style = "fg:#090c0c bg:#7DF9AA"
 
 [directory]
 format = "[ ﱮ $path ]($style)"
